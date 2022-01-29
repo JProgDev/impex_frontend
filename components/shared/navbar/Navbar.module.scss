@@ -1,0 +1,23 @@
+.link{
+  position: relative;
+  &:hover .dropdown{
+    display: block;
+  }
+
+  .dropdown{
+    padding-top: 1.6rem;
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 90%;
+    left: 0;
+    opacity: 1;
+    display: none;
+    min-width: 200px;
+
+    .content{
+      background-color: white;
+      padding: 1rem;
+    }
+  }
+}

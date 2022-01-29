@@ -1,22 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import {links} from "./Navbar.constants";
+import classes from "./Navbar.module.scss";
 
 export const Navbar = ({name, href, children = []}) => {
 
-    const _renderLink = (href, name) => (
-        <Link passHref href={href} className="nav-item">
-            <span className="nav-link">{name}</span>
-        </Link>
-    )
+    const _renderLink = (href, name) => (<Link passHref href={href} className="nav-item">
+        <span className="nav-link pointer">{name}</span>
+    </Link>)
 
-    const _renderDropdown = (children, name) => (
-        <li className="nav-item active">
-            <span className="nav-link">
-                {name}
-            </span>
-        </li>
-    )
+    const _renderDropdown = (children = [], name) => (<li className={`nav-item ${classes.link}`}>
+                             <span className="nav-link pointer">
+                                {name}
+                            </span>
+        <span className={classes.dropdown}>
+                            <div className={classes.content}>
+                                {children.map((child, index) => (<Link href={child.href} key={index}>
+                                    <p className="pointer">{child.name}</p>
+                                </Link>))}
+                            </div>
+                      </span>
+    </li>)
 
     return (<header>
         <nav className="navbar navbar-expand-lg w-100">
@@ -39,12 +43,15 @@ export const Navbar = ({name, href, children = []}) => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"/>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav mx-auto">
+                        {links.map((link, index) => {
+                            return link.children ? _renderDropdown(link.children, link.name) : _renderLink(link.href, link.name)
+                        })}
                         <Link passHref href={"/news"} className="nav-item">
-                            <span className="nav-link">OAV uchun</span>
+                            <span className="nav-link pointer">OAV uchun</span>
                         </Link>
                         <Link passHref href={"/useful_links"} className="nav-item">
                             <span className="nav-link">Foydali linklar</span>
