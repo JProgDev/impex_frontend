@@ -1,7 +1,7 @@
 export const links = [
     {
-        href: '/about_us',
-        name: 'Biz haqimizda'
+        name: 'Biz haqimizda',
+        href: '/about_us'
     },
     {
         name: 'Sug`urta',
@@ -15,5 +15,17 @@ export const links = [
                 href: '/insurance/physical'
             },
         ]
-    }
+    },
+    {
+        name: 'Interaktiv Hizmatlar',
+        href: 'interactive_services'
+    },
+    {
+        name: 'OAV Uchun',
+        href: 'news'
+    },
+    {
+        name: 'Aloqa',
+        href: 'contacts'
+    },
 ]

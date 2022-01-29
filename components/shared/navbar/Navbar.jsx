@@ -50,22 +50,6 @@ export const Navbar = ({name, href, children = []}) => {
                         {links.map((link, index) => {
                             return link.children ? _renderDropdown(link.children, link.name) : _renderLink(link.href, link.name)
                         })}
-                        <Link passHref href={"/news"} className="nav-item">
-                            <span className="nav-link pointer">OAV uchun</span>
-                        </Link>
-                        <Link passHref href={"/useful_links"} className="nav-item">
-                            <span className="nav-link">Foydali linklar</span>
-                        </Link>
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#insuranses">
-                                Sug`urta
-                            </a>
-                        </li>
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#about">
-                                Aloqa
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
