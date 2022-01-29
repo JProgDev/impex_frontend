@@ -1,0 +1,13 @@
+.list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: .6rem;
+    font-weight: bolder;
+    &:hover {
+      color: white;
+      background-color: var(--impex-orange);
+    }
+  }
+}

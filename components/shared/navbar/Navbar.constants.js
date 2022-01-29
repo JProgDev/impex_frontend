@@ -1,7 +1,20 @@
 export const links = [
     {
         name: 'Biz haqimizda',
-        href: '/about_us'
+        children: [
+            {
+                name: 'Biz haqimizda',
+                href: '/about_us'
+            },
+            {
+                name: 'Mijozlarimiz',
+                href: '/clients'
+            },
+            {
+                name: 'Hamkorlarimiz',
+                href: '/partners'
+            },
+        ]
     },
     {
         name: 'Sug`urta',

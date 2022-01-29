@@ -16,7 +16,7 @@ export const Navbar = ({name, href, children = []}) => {
         <span className={classes.dropdown}>
                             <div className={classes.content}>
                                 {children.map((child, index) => (<Link href={child.href} key={index}>
-                                    <p className="pointer">{child.name}</p>
+                                    <div className={`pointer ${classes.item}`}>{child.name}</div>
                                 </Link>))}
                             </div>
                       </span>
