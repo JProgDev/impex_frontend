@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const Navbar = () => {
@@ -6,7 +7,7 @@ export const Navbar = () => {
     <header>
       <nav className="navbar navbar-expand-lg w-100">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" href="/#" passHref>
             <Image
               width={120}
               height={60}
@@ -14,7 +15,7 @@ export const Navbar = () => {
               className="logo"
               alt="impex-logo"
             />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -28,14 +29,12 @@ export const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav mx-auto">
+              <Link passHref href={"/news"} className="nav-item">
+                <span className="nav-link">OAV uchun</span>
+              </Link>
               <li className="nav-item active">
                 <a className="nav-link" href="#insuranses">
                   Sug`urta
-                </a>
-              </li>
-              <li className="nav-item active">
-                <a className="nav-link" href="#news">
-                  OAV uchun
                 </a>
               </li>
               <li className="nav-item active">

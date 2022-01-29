@@ -15,7 +15,9 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Navbar />
-      <Component {...pageProps} />
+      <main className="content">
+        <Component {...pageProps} />
+      </main>
       <Footer />
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

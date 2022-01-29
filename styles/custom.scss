@@ -69,7 +69,7 @@ a:hover {
 .card {
   border: none;
   height: 100%;
-  box-shadow: 0px 5px 15px hsla(0, 10%, 50%, 0.3);
+  //box-shadow: 0px 5px 15px hsla(0, 10%, 50%, 0.3);
 }
 
 .insurance-card {
@@ -81,6 +81,11 @@ a:hover {
 
 .insurance-card:hover {
   transform: scale(1.1);
+}
+
+.content{
+  padding-top: 80px;
+  min-height: 73vh;
 }
 
 footer {
