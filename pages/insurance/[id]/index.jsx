@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {InsuranceList} from "../../../components";
+import {SidebarList} from "../../../components";
 
 const InsuranceDetailsPage = () => {
     return <div className="mt-4">
@@ -22,7 +22,7 @@ const InsuranceDetailsPage = () => {
                 <div className="col-md-4">
                     <div className="card">
                         <div className="card-body">
-                            <InsuranceList/>
+                            <SidebarList/>
                         </div>
                     </div>
                 </div>

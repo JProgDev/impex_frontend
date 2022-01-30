@@ -3,13 +3,13 @@ import Link from "next/link";
 import {links} from "./Navbar.constants";
 import classes from "./Navbar.module.scss";
 
-export const Navbar = ({name, href, children = []}) => {
+export const Navbar = () => {
 
-    const _renderLink = (href, name) => (<Link passHref href={href} className="nav-item">
+    const _renderLink = (href, name, index) => (<Link key={index} passHref href={href} className="nav-item">
         <span className="nav-link pointer">{name}</span>
     </Link>)
 
-    const _renderDropdown = (children = [], name) => (<li className={`nav-item ${classes.link}`}>
+    const _renderDropdown = (children = [], name, index) => (<li key={index} className={`nav-item ${classes.link}`}>
                              <span className="nav-link pointer">
                                 {name}
                             </span>
@@ -48,7 +48,7 @@ export const Navbar = ({name, href, children = []}) => {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav mx-auto">
                         {links.map((link, index) => {
-                            return link.children ? _renderDropdown(link.children, link.name) : _renderLink(link.href, link.name)
+                            return link.children ? _renderDropdown(link.children, link.name, index) : _renderLink(link.href, link.name, index)
                         })}
                     </ul>
                 </div>

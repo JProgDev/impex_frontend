@@ -7,6 +7,14 @@ export const links = [
                 href: '/about_us'
             },
             {
+                name: 'Raxbariyat',
+                href: '/management'
+            },
+            {
+                name: 'Litsenziyalar',
+                href: '/licenses'
+            },
+            {
                 name: 'Mijozlarimiz',
                 href: '/clients'
             },
@@ -31,14 +39,23 @@ export const links = [
     },
     {
         name: 'Interaktiv Hizmatlar',
-        href: 'interactive_services'
+        children: [
+            {
+                name: 'Vertual qabulxona',
+                href: '/interactive_services/virtual_reception'
+            },
+            {
+                name: 'Foydali linklar',
+                href: '/interactive_services/useful_links'
+            },
+        ]
     },
     {
         name: 'OAV Uchun',
-        href: 'news'
+        href: '/news'
     },
     {
         name: 'Aloqa',
-        href: 'contacts'
+        href: '/contacts'
     },
 ]
